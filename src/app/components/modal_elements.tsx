@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-import "../globals.css";
+import "@/app/globals.css";
 
 export function Embed({uuid} : {uuid : string}) {
   return (

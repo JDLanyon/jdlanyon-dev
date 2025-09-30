@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Modal } from '../../(.)programming/modal'
+import { Modal } from "@/app/components/modal"
 
 
 // TODO: Props

@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Link from 'next/link'
 
-import Footer from "../components/footer";
-import Nav from "../components/nav";
-import Panel from "../components/panel";
+import Footer from "@/app/components/footer";
+import Nav from "@/app/components/nav";
+import Panel from "@/app/components/panel";
 
 
 export default function About() {

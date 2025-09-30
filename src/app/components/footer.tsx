@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-import "../globals.css";
+import "@/app/globals.css";
 import Button from "./button";
 
 import { SiGithub, SiInstagram, SiYoutube } from '@icons-pack/react-simple-icons';

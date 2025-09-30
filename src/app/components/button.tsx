@@ -3,7 +3,7 @@
 import { useRouter } from 'next/navigation'
 import Image from "next/image";
 
-import "../globals.css";
+import "@/app/globals.css";
 
 
 interface ButtonProps {

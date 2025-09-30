@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import { Modal } from '../modal'
+import { Modal } from '@/app/components/modal'
 
 
 // TODO: dynamically fetch existing information

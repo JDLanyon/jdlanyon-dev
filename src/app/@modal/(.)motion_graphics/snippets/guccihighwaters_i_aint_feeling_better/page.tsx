@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Modal } from "../../modal";
+import { Modal } from "@/app/components/modal";
 import { Embed, EmbedAndLocal, LocalVideo } from "@/app/components/modal_elements";
 
 // TODO: Props

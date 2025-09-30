@@ -1,11 +1,11 @@
-import { MOTION_GRAPHICS } from "../project_data"
 import Link from "next/link";
 import Image from "next/image";
 
-import Button from "../components/button";
-import Footer from "../components/footer";
-import Nav from "../components/nav";
-import Panel, {PanelsFromData} from "../components/panel";
+import { PanelsFromData } from "@/app/components/panel";
+import { MOTION_GRAPHICS } from "@/app/project_data"
+import Button from "@/app/components/button";
+import Footer from "@/app/components/footer";
+import Nav from "@/app/components/nav";
 
 
 

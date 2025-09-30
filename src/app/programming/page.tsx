@@ -2,11 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-import { PanelsFromData } from "../components/panel";
-import { PROGRAMMING } from "../project_data"
-import Button from "../components/button";
-import Footer from "../components/footer";
-import Nav from "../components/nav";
+import { PanelsFromData } from "@/app/components/panel";
+import { PROGRAMMING } from "@/app/project_data"
+import Button from "@/app/components/button";
+import Footer from "@/app/components/footer";
+import Nav from "@/app/components/nav";
 
 
 export default function Programming() {
