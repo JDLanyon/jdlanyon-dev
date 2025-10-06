@@ -36,7 +36,7 @@ export default function Home() {
           </div>
         </main>
       </div>
-      <Footer absolute={true} />
+      <Footer landingPage={true} />
     </div>
   );
 }

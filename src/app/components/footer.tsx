@@ -1,12 +1,10 @@
 "use client"
 
-import Image from "next/image";
-
 import "@/app/globals.css";
 import Button from "./button";
 
 import { SiGithub, SiInstagram, SiYoutube } from '@icons-pack/react-simple-icons';
-import { Circle, Eclipse, Moon, Linkedin } from 'lucide-react';
+import { Circle, Moon, Linkedin } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
 
@@ -48,12 +46,12 @@ const ThemeSwitch = () => {
   )
 }
 
-export default function Footer({large = false, absolute = false} : {large? : boolean, absolute? : boolean}) {
+export default function Footer({landingPage = false} : {landingPage? : boolean}) {
   return (
-    <footer className={`z-1 mt-auto flex w-full mx-auto items-center justify-center bottom-0 ${large ? "py-16 gap-[10%] text-lg px-30 sm:px-0 sm:flex sm:flex-wrap" : "py-8 gap-8"} ${absolute ? "absolute" : "relative"}`}>
+    <footer className={`w-full flex-col flex lg:flex-row items-center justify-center mx-auto bottom-0 my-8 ${landingPage ? 'lg:absolute' : ''}`}>
       {/* Github */}
       <a
-        className="flex items-center gap-2 p-2 hover:underline hover:underline-offset-4 text-[var(--secondary)]"
+        className="flex gap-2 p-2 hover:underline hover:underline-offset-4 text-[var(--secondary)]"
         href="https://github.com/JDLanyon"
         target="_blank"
         rel="noopener noreferrer"
