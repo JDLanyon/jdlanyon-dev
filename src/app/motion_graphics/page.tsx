@@ -1,6 +1,3 @@
-import Link from "next/link";
-import Image from "next/image";
-
 import { PanelsFromData } from "@/app/components/panel";
 import { MOTION_GRAPHICS } from "@/app/project_data"
 import Button from "@/app/components/button";

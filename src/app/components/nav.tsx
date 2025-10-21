@@ -6,6 +6,7 @@ import Image from "next/image";
 import "@/app/globals.css";
 import { Menu, X } from 'lucide-react';
 import { usePathname } from 'next/navigation'
+import Link from "next/link";
 
 
 function NavButton({text, href} : {text : string, href : string}) {
@@ -57,7 +58,7 @@ export default function Nav() {
   }
 
   return (
-    <nav className="z-10 grid grid-cols-7 w-screen gap-8 items-center justify-center text-center fixed top-0">
+    <nav className="z-10 grid grid-cols-7 w-screen gap-8 items-center justify-center text-center fixed top-0 bg-gradient-to-b from-[var(--background)] to-0">
       {/* left side */}
       <div className="col-start-2 col-span-2 mx-auto gap-16 hidden md:relative md:flex">
         <NavButton text="Home" href="/" />
@@ -65,7 +66,7 @@ export default function Nav() {
       </div>
 
       {/* Lotus */}
-      <a className="col-start-4 mx-auto col-300" href="/">
+      <Link className="col-start-4 mx-auto col-300" href="/">
         <Image
           className="dark:invert"
           src="/lotus.svg"
@@ -73,7 +74,7 @@ export default function Nav() {
           height={64}
           alt="lotus"
         />
-      </a>
+      </Link>
 
       {/* right side */}
       <div className="col-start-5 col-span-2 mx-auto gap-16 hidden md:relative md:flex">

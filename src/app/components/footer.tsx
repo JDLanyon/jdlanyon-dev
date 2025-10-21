@@ -48,7 +48,7 @@ const ThemeSwitch = () => {
 
 export default function Footer({landingPage = false} : {landingPage? : boolean}) {
   return (
-    <footer className={`w-full flex-col flex lg:flex-row items-center justify-center mx-auto bottom-0 my-8 ${landingPage ? 'lg:absolute' : ''}`}>
+    <footer className={`w-full flex-col flex lg:flex-row items-center justify-center mx-auto my-8 ${landingPage ? 'lg:absolute' : ''}`}>
       {/* Github */}
       <a
         className="flex gap-2 p-2 hover:underline hover:underline-offset-4 text-[var(--secondary)]"

@@ -41,11 +41,11 @@ export default function GlobalNotFound() {
           <div className="grid items-center justify-items-center h-screen w-screen p-8 gap-16 relative">
             <main className="flex flex-col gap-8 items-center text-center">
               <h1>404</h1>
-              <h3>Page not found D:</h3>
+              <h3>Page not found :&lt;</h3>
               <Button text="Home" href="/"/>
             </main>
           </div>
-          <Footer absolute={true} />
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
