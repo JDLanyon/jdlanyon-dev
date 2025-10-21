@@ -20,13 +20,8 @@ interface PanelsFromDataProps {
   data : PanelProps[]
 }
 
-const imageExists = async (path : string) => {
-  return await fetch(`http://localhost:3000${path}`, {
-    method: "HEAD",
-  });
-};
-
 // the PanelProps[] datatype was big brain fr
+// use GeneratePanels() instead
 export function PanelsFromData({id, category, sub_category, heading, thumbnails_path, data} : PanelsFromDataProps) {
   return (
     <div id={id}>
@@ -47,47 +42,42 @@ export function PanelsFromData({id, category, sub_category, heading, thumbnails_
   );
 }
 
-export default async function Panel({id, title, thumbnail, description} : PanelProps) {
+export default function GeneratePanels({category, sub_category, panel_data} : {category: string, sub_category: string, panel_data : PanelProps[]}) {
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 auto-rows-min items-center justify-items-center p-8 gap-16">
+    {panel_data.map(p => (
+      <Link key={`${p.id}`} href={`/${category}/${sub_category}/${p.id}`} passHref> 
+      {/* <Panel id={p.id} title={p.title} description={p.description} thumbnail={`${category}/${sub_category}/${p.id}/${p.thumbnail}`} /> */}
+      {p.thumbnail ? 
+        <Panel id={p.id} title={p.title} description={p.description} thumbnail={`/${category}/${sub_category}/${p.id}/${p.thumbnail}`} /> :
+        <Panel id={p.id} title={p.title} description={p.description} />
+      }
+      </Link>
+    ))}
+    </div>
+  );
+}
+
+export function Panel({id, title, thumbnail, description} : PanelProps) {
   // if there's no title use id
   if (!title && id) title=id;
 
-  console.log(thumbnail)
-
-  // if a thumbnail was provided, try rendering with the thumbnail
-  if (thumbnail) {
-    // thumbnail was provided, check that the image itself exists
-    const result = await imageExists(thumbnail)
-    if (result.status == 200) {
-      // image actually exists, return with thumbnail
-      return (
-        <div className={`break-inside-avoid w-full transition transform hover:-translate-y-1 hover:bg-[var(--primary)] hover:text-[var(--background)]`}>
-          {/* TODO: pointer cursor and trigger modal */}
-          <div className={thumbnail ? "grid text-center" : "grid my-auto text-center"}>
-            {thumbnail && result.status === 200 ? 
-              <Image
-              className="mx-auto w-full"
-              src={thumbnail}
-              // layout="contain"
-              width={1000}
-              height={1000}
-              // sizes="100vw"
-              // style={{ width: '100%', height: 'auto' }} // optional
-              alt="panel thumbnail"
-              /> : null
-            }
-            <h2 className="py-2">{title}</h2>
-            <p className="pb-4">{description}</p>
-          </div>
-        </div>
-      );
-    }
-  }
-
-  // no thumbnail
   return (
-    <div className={`break-inside-avoid w-full transition transform m-4 hover:-translate-y-1 hover:bg-[var(--primary)] hover:text-[var(--background)]`}>
+    <div className={`break-inside-avoid w-full transition transform hover:-translate-y-1 hover:bg-[var(--primary)] hover:text-[var(--background)]`}>
       {/* TODO: pointer cursor and trigger modal */}
-      <div className="grid my-auto text-center">
+      <div className={"grid my-auto text-center"}>
+        {thumbnail ? 
+          <Image
+          className="mx-auto w-full"
+          src={thumbnail}
+          // layout="contain"
+          width={1000}
+          height={1000}
+          // sizes="100vw"
+          // style={{ width: '100%', height: 'auto' }} // optional
+          alt="panel thumbnail"
+          /> : null
+        }
         <h2 className="py-2">{title}</h2>
         <p className="pb-4">{description}</p>
       </div>

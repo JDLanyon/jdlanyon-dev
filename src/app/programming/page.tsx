@@ -1,6 +1,6 @@
 import React from "react";
 
-import { PanelsFromData } from "@/app/components/panel";
+import GeneratePanels from "@/app/components/panel";
 import { PROGRAMMING } from "@/app/project_data"
 import Button from "@/app/components/button";
 import Footer from "@/app/components/footer";
@@ -12,14 +12,11 @@ export default function Programming() {
     <section className="min-h-[100vh] flex flex-col">
       <Nav />
         <div id="content" className="px-32 py-8 mt-16">
-
           <div className="flex gap-4 w-full mx-auto items-center justify-center">
             <Button text="Uni Projects" href="#uni" />
           </div>
-
-          <PanelsFromData id="uni" category="programming" sub_category="uni" heading="Uni Projects" thumbnails_path="/programming/uni/" data={PROGRAMMING.UNI} />
-          {/* <PanelsFromData heading="Uni Projects" thumbnails_path="/programming/uni_revisited/" data={PROGRAMMING.UNI_REVISITED} /> */}
-
+          <h2 id="uni">Uni Projects</h2>
+          <GeneratePanels category="programming" sub_category="uni" panel_data={PROGRAMMING.UNI} />
         </div>
       <Footer />
     </section>
