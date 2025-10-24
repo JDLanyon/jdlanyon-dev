@@ -48,10 +48,10 @@ const ThemeSwitch = () => {
 
 export default function Footer({landingPage = false} : {landingPage? : boolean}) {
   return (
-    <footer className={`w-full flex-col flex lg:flex-row items-center justify-center mx-auto my-8 ${landingPage ? 'lg:absolute' : ''}`}>
+    <footer className={`relative z-1 w-min flex-col flex md:flex-row items-center justify-center mx-auto my-8 ${landingPage ? 'md:absolute md:bottom-8 md:left-0 md:right-0' : ''}`}>
       {/* Github */}
       <a
-        className="flex gap-2 p-2 hover:underline hover:underline-offset-4 text-[var(--secondary)]"
+        className="flex gap-2 p-2 hover:underline hover:underline-offset-4 text-(--secondary)"
         href="https://github.com/JDLanyon"
         target="_blank"
         rel="noopener noreferrer"
@@ -62,7 +62,7 @@ export default function Footer({landingPage = false} : {landingPage? : boolean})
 
       {/* LinkedIn */}
       <a
-        className="flex items-center gap-2 p-2 hover:underline hover:underline-offset-4 text-[var(--secondary)]"
+        className="flex items-center gap-2 p-2 hover:underline hover:underline-offset-4 text-(--secondary)"
         href="https://www.linkedin.com/in/jdlanyon/"
         target="_blank"
         rel="noopener noreferrer"
@@ -74,7 +74,7 @@ export default function Footer({landingPage = false} : {landingPage? : boolean})
       {/* Youtube */}
       <a
         title="branded account"
-        className="flex items-center gap-2 p-2 hover:underline hover:underline-offset-4 text-[var(--secondary)]"
+        className="flex items-center gap-2 p-2 hover:underline hover:underline-offset-4 text-(--secondary)"
         href="https://www.youtube.com/@sausytime"
         target="_blank"
         rel="noopener noreferrer"
@@ -85,7 +85,7 @@ export default function Footer({landingPage = false} : {landingPage? : boolean})
 
       {/* Instagram */}
       <a
-        className="flex items-center gap-2 p-2 hover:underline hover:underline-offset-4 text-[var(--secondary)]"
+        className="flex items-center gap-2 p-2 hover:underline hover:underline-offset-4 text-(--secondary)"
         href="https://www.instagram.com/sausytime/"
         target="_blank"
         rel="noopener noreferrer"

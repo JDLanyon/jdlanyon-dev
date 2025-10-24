@@ -8,7 +8,7 @@ import Hero from "./components/hero";
 export default function Home() {
 
   return (
-    <div className="h-screen w-screen relative">
+    <div className="h-screen w-screen relative md:overflow-hidden">
       {/* background animation */}
       <img
           className={`hidden lg:block w-full h-full bg-cover absolute z-0 invert dark:invert-0`}

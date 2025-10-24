@@ -9,14 +9,14 @@ import Nav from "@/app/components/nav";
 
 export default function Programming() {
   return (
-    <section className="min-h-[100vh] flex flex-col">
+    <section className="min-h-screen flex flex-col">
       <Nav />
         <div id="content" className="px-32 py-8 mt-16">
           <div className="flex gap-4 w-full mx-auto items-center justify-center">
             <Button text="Uni Projects" href="#uni" />
           </div>
           <h2 id="uni">Uni Projects</h2>
-          <GeneratePanels category="programming" sub_category="uni" panel_data={PROGRAMMING.UNI} />
+          <GeneratePanels path="/programming/uni" panel_data={PROGRAMMING.UNI} />
         </div>
       <Footer />
     </section>

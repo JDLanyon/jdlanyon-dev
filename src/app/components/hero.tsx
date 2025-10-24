@@ -6,7 +6,7 @@ import Button from "./button";
 
 export default function Hero() {
   return (
-    <div id="hero" className="justify-items-center h-full p-8 my-16 flex flex-col gap-8 items-center text-center z-1">
+    <div id="hero" className="justify-items-center h-min p-8 my-8 flex flex-col gap-8 items-center text-center z-1">
       <Image
         className="invert mx-auto light:invert-0"
         src="/lotus.svg"
@@ -15,8 +15,8 @@ export default function Hero() {
         alt="lotus"
       />
       {/* <h1 className="!font-[family-name:var(--font-doto)]">Home of epic B)</h1> */}
-      <p className="z-1">Thanks for visiting my portfolio, start exploring with the options below!</p>
-      <div className="flex gap-4 items-center flex-col md:flex-row">
+      <p className="z-1 text-[--var(secondary)]">Thanks for visiting my portfolio, start exploring with the options below!</p>
+      <div className="z-1 flex gap-4 items-center flex-col md:flex-row">
         <Button text="About" href="/about"/>
         <Button text="Programming" href="/programming"/>
         <Button text="Motion Graphics" href="/motion_graphics"/>

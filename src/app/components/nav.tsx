@@ -12,14 +12,14 @@ import Link from "next/link";
 function NavButton({text, href} : {text : string, href : string}) {
   if (href == usePathname()) {
     return (<a
-    className="flex items-center text-[var(--primary)] font-bold"
+    className="flex items-center text-(--primary) font-bold"
     rel="noopener noreferrer"
   >
     {text}
   </a>);
   } {
     return (<a
-    className="flex items-center hover:underline hover:underline-offset-4 text-[var(--secondary)]"
+    className="flex items-center hover:underline hover:underline-offset-4 text-(--secondary)"
     href={href}
     rel="noopener noreferrer"
   >
@@ -31,7 +31,7 @@ function NavButton({text, href} : {text : string, href : string}) {
 function MobileMenu({ is_open, toggle } : {is_open : boolean, toggle : React.MouseEventHandler}) {
   return (
     <div
-      className={`fixed flex flex-col justify-center items-center z-10 top-0 right-0 h-full w-full bg-[var(--background)]/80 transition-transform duration-300 transform ${
+      className={`fixed flex flex-col justify-center items-center z-10 top-0 right-0 h-full w-full bg-(--background)/80 transition-transform duration-300 transform ${
         is_open ? 'translate-x-0' : 'translate-x-full'
       }`}
     >
@@ -58,7 +58,7 @@ export default function Nav() {
   }
 
   return (
-    <nav className="z-10 grid grid-cols-7 w-screen gap-8 items-center justify-center text-center fixed top-0 bg-gradient-to-b from-[var(--background)] to-0">
+    <nav className="z-10 grid grid-cols-7 w-screen gap-8 items-center justify-center text-center fixed top-0 bg-linear-to-b from-(--background)/60 to-0">
       {/* left side */}
       <div className="col-start-2 col-span-2 mx-auto gap-16 hidden md:relative md:flex">
         <NavButton text="Home" href="/" />

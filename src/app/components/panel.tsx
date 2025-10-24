@@ -5,8 +5,9 @@ import "@/app/globals.css";
 
 
 interface PanelProps {
-  id?: string;
+  id: string;
   title?: string;
+  path?: string;
   thumbnail?: string;
   description?: string;
 }
@@ -42,15 +43,15 @@ export function PanelsFromData({id, category, sub_category, heading, thumbnails_
   );
 }
 
-export default function GeneratePanels({category, sub_category, panel_data} : {category: string, sub_category: string, panel_data : PanelProps[]}) {
+export default function GeneratePanels({path, panel_data} : {path: string, panel_data : PanelProps[]}) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 auto-rows-min items-center justify-items-center p-8 gap-16">
     {panel_data.map(p => (
-      <Link key={`${p.id}`} href={`/${category}/${sub_category}/${p.id}`} passHref> 
+      <Link key={`${p.id}`} href={`${path}/${p.id}`} passHref> 
       {/* <Panel id={p.id} title={p.title} description={p.description} thumbnail={`${category}/${sub_category}/${p.id}/${p.thumbnail}`} /> */}
       {p.thumbnail ? 
-        <Panel id={p.id} title={p.title} description={p.description} thumbnail={`/${category}/${sub_category}/${p.id}/${p.thumbnail}`} /> :
-        <Panel id={p.id} title={p.title} description={p.description} />
+        <Panel id={p.id} title={p.title} description={p.description} path={`${path}/${p.id}`} thumbnail={p.thumbnail} /> :
+        <Panel id={p.id} title={p.title} description={p.description} path={`${path}/${p.id}`} />
       }
       </Link>
     ))}
@@ -58,18 +59,20 @@ export default function GeneratePanels({category, sub_category, panel_data} : {c
   );
 }
 
-export function Panel({id, title, thumbnail, description} : PanelProps) {
+export function Panel({id, title, path, thumbnail, description} : PanelProps) {
   // if there's no title use id
   if (!title && id) title=id;
 
+  console.log(`loading ${path}/${thumbnail}`)
+
   return (
-    <div className={`break-inside-avoid w-full transition transform hover:-translate-y-1 hover:bg-[var(--primary)] hover:text-[var(--background)]`}>
+    <div className={`break-inside-avoid w-full transition transform hover:-translate-y-1 hover:bg-(--primary) hover:text-(--background)`}>
       {/* TODO: pointer cursor and trigger modal */}
       <div className={"grid my-auto text-center"}>
-        {thumbnail ? 
+        {path ? 
           <Image
           className="mx-auto w-full"
-          src={thumbnail}
+          src={thumbnail ? `${path}/${thumbnail}` : `${path}/thumbnail.png`}
           // layout="contain"
           width={1000}
           height={1000}
