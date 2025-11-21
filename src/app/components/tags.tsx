@@ -18,7 +18,7 @@ export default function Tags({tags} : {tags : string[]}) {
   return (
     <div className="flex flex-wrap grow h-auto items-center justify-center">
       {tags ? tags.map(t => (
-          <a key={t} className="font-bold text-xl! py-2 mx-8">{t}</a>
+          <p key={t} className="font-bold text-sm py-2 mx-8 text-(--secondary) group-hover:text-(--background)!">{t}</p>
       )) : null}
     </div>
   )

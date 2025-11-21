@@ -70,9 +70,9 @@ export function Panel({id, title, path, thumbnail, description, tags} : PanelPro
   console.log(`loading ${path}/${thumbnail}`)
 
   return (
-    <div className={`break-inside-avoid w-full transition transform p-4 hover:-translate-y-1 hover:bg-(--primary) hover:text-(--background)`}>
+    <div className='group break-inside-avoid w-full transition transform p-4 hover:-translate-y-1 hover:bg-(--primary) hover:text-(--background)'>
       {/* TODO: pointer cursor and trigger modal */}
-      <div className={"grid my-auto text-center"}>
+      <div className='grid my-auto text-center'>
         {path ? 
           <Image
           className="mx-auto w-full"

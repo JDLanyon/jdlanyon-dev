@@ -14,7 +14,7 @@ export default async function Project() {
         </div>
         <h1 className="text-center m-0 mb-8">BeeAware Hive Inspections Plugin</h1>
 
-        <div className="flex flex-wrap [&>*]:p-2">
+        <div className="flex flex-wrap *:p-2">
           <Image
             className="w-1/2"
             src="/programming/uni/IFB399/landing_page.png"
@@ -47,14 +47,14 @@ export default async function Project() {
           />
 
           <Image
-            className="w-fill"
+            className="w-2/3"
             src="/programming/uni/IFB399/risk_register.png"
             width={1000}
             height={1000}
             alt="panel thumbnail"
           />
           <Image
-            className="w-1/4"
+            className="w-1/3"
             src="/programming/uni/IFB399/user_stories.png"
             width={1000}
             height={1000}

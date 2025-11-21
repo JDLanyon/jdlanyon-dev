@@ -58,7 +58,7 @@ export default function Nav() {
   }
 
   return (
-    <nav className="z-10 grid grid-cols-7 w-screen gap-8 items-center justify-center text-center fixed top-0 bg-linear-to-b from-(--background)/60 to-0">
+    <nav className="z-10 grid grid-cols-7 w-screen gap-8 items-center justify-center text-center fixed top-0 bg-linear-to-b from-(--background)/80 to-0">
       {/* left side */}
       <div className="col-start-2 col-span-2 mx-auto gap-16 hidden md:relative md:flex">
         <NavButton text="Home" href="/" />

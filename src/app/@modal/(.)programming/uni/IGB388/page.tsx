@@ -13,7 +13,7 @@ export default async function Project() {
           <Button text="View on GitHub" href="https://github.com/JDLanyon/Rescreetply" target_blank><SiGithub /></Button>
         </div>
         <h1 className="text-center m-0 mb-8">Dead Bread</h1>
-        <div className="flex flex-wrap [&>*]:p-2 [&>*]:mx-auto">
+        <div className="flex flex-wrap p-2 mx-auto">
           <div className="w-1/4 text-right">
             <p>Dead bread is a VR game developed in Unity by myself and 3 others.</p>
             <br/>

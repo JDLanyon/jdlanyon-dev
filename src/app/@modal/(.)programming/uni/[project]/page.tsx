@@ -9,7 +9,7 @@ export default async function Project() {
     <Modal>
       <div>
         <h1>Whoops</h1>
-        <p>{`Looks there isn't any information for this one yet :<`}</p>
+        <p>{`Looks there isn't any information for this yet :(`}</p>
       </div>
     </Modal>
   )

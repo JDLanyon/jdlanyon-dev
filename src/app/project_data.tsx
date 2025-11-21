@@ -1,6 +1,13 @@
 export const PROGRAMMING = {
   UNI: [
     {
+      id: "CAB302",
+      title: "CAB302 - Task Tank",
+      description: "A gamified task tracking and pomodoro timer application",
+      thumbnail: "full-tank-scene.png",
+      tags: ["Java", "JavaFX", "SQLite"]
+    },
+    {
       id: "IGB400",
       title: "IGB400 - Slime Arcade",
       description: "An arcade themed slime pet simulator",
