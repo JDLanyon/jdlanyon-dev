@@ -1,36 +1,122 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<a id="readme-top"></a> <!-- for the 'back to top' navigation -->
 
-## Getting Started
 
-First, run the development server:
+<!-- logo -->
+<br />
+<div align="center">
+  <a href="https://jdlanyon.github.io/">
+    <img src="public/lotus.png" alt="Logo" width="75px">
+  </a>
+  <h3>My Portfolio Project</h3>
+  <p>A portfolio website built with <a href="https://nextjs.org">Next.js</a> to showcase my past work</p>
+</div>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+<!-- contents -->
+<!-- <details>
+  <summary>Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+  </ol>
+</details> -->
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+<!-- ABOUT THE PROJECT -->
+## About the Project
+<div align="center">
+    <a align="center" href="https://jdlanyon.github.io/">
+    <img src="public/motion_graphics/GlowingBanner.gif" alt="Logo" width="60%">
+    </a>
+</div>
 
-## Learn More
+I firmly believe programming can be a modern art form and I hope this portfolio is one of many steps in my journey fulfilling this belief.
+The overall style for the portfolio is to be as minimal as possible, drawing attention to the projects using clean, simple and unbloated UI.
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+If you find have any questions or suggestions, find some of my work inspiring, or just want to reach out, don't hesitate to <a href="#contact">contact me</a> :>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Built With
+[![Next][nextjs-shield]][nextjs-url]
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project was built with [Next.js](https://nextjs.org/) using the app router.
+
+**Packages & Tools Used;**
+- [GitHub Pages](https://pages.github.com) - deployment
+- [lucide](https://lucide.dev/) - icons
+- [Next Themes](https://github.com/pacocoursey/next-themes) - theming
+- [Overpass](https://fonts.google.com/specimen/Overpass) - font
+- [React Simple Icons](https://simpleicons.org/) - icons
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+<!-- roadmap -->
+## Vague Roadmap
+
+- [x] Custom 404
+- [x] Add CAB302 Project (Task Tank)
+- [x] Add tags
+- [x] Update Readme
+- [ ] Allow System Theme
+- [ ] Add modal content for remaining uni projects
+    - [ ] CAB302 (Task Tank)
+    - [ ] CAB401 (Parallel Processing Analysis)
+    - [ ] IGB383 (Boids and State Machines)
+    - [ ] CAB201 (Mates Rates - CLI)
+    - [ ] CAB301 (Tool Library - CLI)
+- [ ] Modal content for the Motion Graphics stuff and any other non uni things
+- [ ] Pull readme data from GitHub modal content
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+<!-- licence -->
+<!-- ## License
+
+Distributed under the Unlicense License. See `LICENSE.txt` for more information.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
+
+
+<!-- contact -->
+<h2 id="contact">Contact</h2>
+
+[![LinkedIn][linkedin-shield]][linkedin-url]
+[![Email][email-shield]][email-url]
+
+
+<!-- [@your_twitter](https://twitter.com/your_username) - [jlany9@hotmail.com](mailto:jlany9@hotmail.com) -->
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[email-shield]: https://img.shields.io/badge/-Email-black?style=for-the-badge
+[email-url]: mailto:jlany9@hotmail.com
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black?style=for-the-badge
+[linkedin-url]: https://linkedin.com/in/jdlanyon
+[nextjs-shield]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
+[nextjs-url]: https://nextjs.org/
